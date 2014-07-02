@@ -1,0 +1,51 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="vendor/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="besteditor.dark.css">
+    <script type="text/javascript" src="besteditor.js"></script>
+</head>
+<body>
+    <div id="stuffs"></div>
+    <div id="stuffs2"></div>
+    <div id="stuffs3">
+        <p>A Long-expected Party</p>
+        <p>When Mr. Bilbo Baggins of Bag End announced that he would shortly be celebrating his eleventy-first birthday with a party of special magnificence, there was much talk and excitement in Hobbiton.</p>
+        <p>Bilbo was very rich and very peculiar, and had been the wonder of the Shire for sixty years, ever
+since his remarkable disappearance and unexpected return. The riches he had brought back from his
+travels had now become a local legend, and it was popularly believed, whatever the old folk might
+say, that the Hill at Bag End was full of tunnels stuffed with treasure. And if that was not enough
+for fame, there was also his prolonged vigour to marvel at. Time wore on, but it seemed to have
+little effect on Mr. Baggins. At ninety he was much the same as at fifty. At ninety-nine they began
+to call him _well_-preserved, but _unchanged_ would have been nearer the mark. There were some
+that shook their heads and thought this was too much of a good thing; it seemed unfair that anyone
+should possess (apparently) perpetual youth as well as (reputedly) inexhaustible wealth.</p>
+ <p>'It will have to be paid for,' they said. 'It isn't natural, and trouble will come of it!'</p>
+    </div>
+    <div id="stuffs4">
+        <p>Three Rings for the Elven-kings under the sky,
+ Seven for the Dwarf-lords in their halls of stone,
+ Nine for Mortal Men doomed to die,
+ One for the Dark Lord on his dark throne
+ In the Land of Mordor where the Shadows lie.
+ One Ring to rule them all, One Ring to find them,
+ One Ring to bring them all and in the darkness bind them
+ In the Land of Mordor where the Shadows lie.</p>
+    </div>
+</body>
+<script type="text/javascript">
+
+    var editor = new Editor().init('stuffs');
+    var editor2 = new Editor().init('stuffs2', {
+        theme:'dark'
+    });
+    var editor3 = new Editor().init('stuffs3', { 
+        inline:true
+    });
+    var editor3 = new Editor().init('stuffs4', { 
+        inline:true,
+        theme:'dark'
+    });
+    
+</script>
+</html>

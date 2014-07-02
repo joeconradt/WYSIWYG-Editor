@@ -1,0 +1,43 @@
+.editor-theme-dark {
+    border:none;  
+}
+.editor-theme-dark .editor-toolbar,
+.editor-theme-dark .editor-toolbar > button,
+.editor-theme-dark .editor-footer,
+.editor-theme-dark.best-editor-inline-toolbar {
+    background: #3d464f;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3d464f), color-stop(100%,#32373d));
+}
+.editor-theme-dark .editor-toolbar > button:hover,
+.editor-theme-dark .editor-dropdown button:hover,
+.editor-theme-dark.best-editor-inline-toolbar button:hover {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#658196), color-stop(100%,#4f6b80));   
+}
+.editor-theme-dark .dropdown-button.active,
+.editor-theme-dark.best-editor-inline-toolbar .dropdown-button.active {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5a6672), color-stop(100%,#434d56)) !important;   
+}
+.editor-theme-dark .editor-toolbar,
+.editor-theme-dark.best-editor-inline-toolbar {   
+    border:1px solid #1c232b;
+    border-top:1px solid #69727b;
+    border-top-left-radius:3px;
+    border-top-right-radius:3px;
+}
+.editor-theme-dark button {
+    background-color:transparent;
+    color:#fefff9;
+}
+.editor-theme-dark .editor-dropdown button {
+    background-color:#3d464f;   
+}
+.editor-theme-dark .editor-editarea {
+    border:none;
+    border-left:2px solid #5a6672;
+    border-right:2px solid #5a6672;
+}
+.editor-theme-dark .editor-footer {
+    border:1px solid #5a6672;  
+    border-bottom-left-radius:3px;
+    border-bottom-right-radius:3px;
+}

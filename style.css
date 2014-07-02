@@ -1,0 +1,99 @@
+::selection {color:white;background:orange;}
+::-moz-selection {color:white;background:orange;}
+.best-editor {
+    max-width:450px;
+    /* get rid of this */
+    display:block;
+    margin:auto;
+    margin-top:50px;
+    /* --------------- */
+}
+.best-editor,
+.best-editor .editor-toolbar,
+.best-editor-inline-toolbar,
+.best-editor .editor-editarea,
+.best-editor .editor-footer {
+    border:1px solid #333;   
+}
+.best-editor .editor-editarea {
+    padding:7px;   
+    color:#333;
+}
+.best-editor .editor-editarea:focus {
+    outline:none;   
+}
+.best-editor button,
+.best-editor-inline-toolbar button {
+    height:30px;
+    min-width:30px;
+    border:0;
+    color:#333;
+    background-color:#fff;
+    cursor:pointer;
+    position:relative;
+    margin:0;
+}
+.best-editor .dropdown-button.active,
+.best-editor button:hover,
+.best-editor-inline-toolbar button:hover {
+    color:#fff;
+    background-color:#333;   
+}
+.best-editor button:focus,
+.best-editor-inline-toolbar button:focus {
+    outline:none;   
+}
+.best-editor .editor-dropdown,
+.best-editor-inline-toolbar .editor-dropdown {
+    min-width:120px;
+    list-style:none;
+    padding:0;
+    margin:0;
+    position:absolute;
+    top:30px;
+    left:0;
+    box-shadow:1px 1px 3px #333;
+    display:none;
+    background-color:#fff;
+}
+.best-editor .dropdown-button > i:first-child {
+    margin-left:-5px; 
+}
+.best-editor .editor-dropdown button,
+.best-editor-inline-toolbar .editor-dropdown button {
+    display: block;
+    width: 100%;
+}
+.best-editor .dropdown-button.active .editor-dropdown,
+.best-editor-inline-toolbar .dropdown-button.active .editor-dropdown {
+    display:inline-block; 
+    z-index:1;
+}
+.best-editor button .fa-caret-down,
+.best-editor-inline-toolbar button .fa-caret-down {
+    position:absolute;
+    right:2px;
+    font-size:10px;
+}
+.best-editor .editor-footer {
+    min-height:15px;   
+}
+
+/* inline editor styles */
+
+.best-editor-inline-toolbar {
+    display:none;
+    box-shadow:1px 1px 5px #333;
+    position:absolute;
+}
+.best-editor-inline-toolbar.active {
+    display:inline-block;
+}
+.best-editor-inline-toolbar > .fa-caret-down {
+    position:absolute;
+    bottom:-13px;
+    height:20px;
+    font-size:20px;
+    color:#333;
+    left:45%;
+}
