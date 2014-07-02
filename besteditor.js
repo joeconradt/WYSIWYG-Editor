@@ -1,6 +1,8 @@
 function Editor() {
     this.t = null;
     this.options = null;
+    this.htmlarea = null;
+    this.editarea = null;
     
     this.commands = {
         bold: { type: 'button', command: 'bold', icon: 'bold' },
@@ -13,6 +15,7 @@ function Editor() {
         heading1: { type: 'button', command: 'formatBlock', value: '<h1>' },
         heading2: { type: 'button', command: 'formatBlock', value: '<h2>' },
         heading3: { type: 'button', command: 'formatBlock', value: '<h3>' },
+        source: { type: 'button', command: 'source', commandType: 'custom', icon: 'code' },
     };  
     
     this.toolBar = [
@@ -30,7 +33,8 @@ function Editor() {
                 '<span style="font-size:18px;font-weight:bold">header 2</span>': 'heading2',
                 '<span style="font-size:14px;font-weight:bold">header 3</span>': 'heading3',
             }
-        }
+        },
+        'source'
     ];
             
     return this;
@@ -65,10 +69,16 @@ Editor.prototype.init = function(elementId, options) {
     } else {
         var editarea = document.createElement('div');
         var footer = document.createElement('div');
+        var htmlarea = document.createElement('textarea');
         
         this.t.appendChild(toolBar);
+        this.t.appendChild(htmlarea);
+        this.htmlarea = htmlarea;
+        this.editarea = editarea;
         editarea.className = 'editor-editarea';
         editarea.setAttribute('contenteditable', 'true');
+        htmlarea.className = 'editor-htmlarea';
+        htmlarea.setAttribute('spellcheck', 'false');
         footer.className = 'editor-footer';
         this.t.appendChild(editarea);
         this.t.appendChild(footer);
@@ -159,6 +169,22 @@ Editor.prototype.hideDropdowns = function() {
 }
     
 Editor.prototype.execute = function(command) {
-    console.log("Executing: " + command.command + ' ' + command.value);
-    document.execCommand(command.command,null,command.value);
+    if(command.commandType === 'custom') {
+        if(command.command === 'source') {
+            this.switchView();   
+        }
+    } else {
+        document.execCommand(command.command,null,command.value);
+    }
+}
+
+Editor.prototype.switchView = function(html) {
+    if(this.editarea.style.display == 'none') {
+        this.editarea.style.display = 'block';  
+        this.htmlarea.style.display = 'none'; 
+    } else {
+        this.editarea.style.display = 'none';
+        this.htmlarea.innerHTML = this.editarea.innerHTML;
+        this.htmlarea.style.display = 'block'; 
+    }
 }

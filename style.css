@@ -19,8 +19,21 @@
     padding:7px;   
     color:#333;
 }
-.best-editor .editor-editarea:focus {
+.best-editor .editor-editarea:focus,
+.best-editor .editor-htmlarea:focus {
     outline:none;   
+}
+.best-editor .editor-htmlarea {
+    display:none;   
+    margin:0;
+    padding:10px;
+    border:1px solid #333;
+    width:100%;
+    background-color:#333;
+    color:rgb(0, 194, 0);
+}
+.best-editor .editor-htmlarea.active {
+    display:block;   
 }
 .best-editor button,
 .best-editor-inline-toolbar button {
